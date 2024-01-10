@@ -1,0 +1,57 @@
+
+<!DOCTYPE html> 
+<html>
+  <head>
+    <!-- Add dependencies: Leaflet, leaflet-basemap, leaflet-providers-->
+    <link rel="stylesheet" href="/node_modules/leaflet/dist/leaflet.css" />
+    <script src="/node_modules/leaflet/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="/node_modules/leaflet-basemaps/L.Control.Basemaps.css" />
+    <script src="/node_modules/leaflet-basemaps/L.Control.Basemaps-min.js"></script>
+    <script src="/node_modules/leaflet-providers/leaflet-providers.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    
+    <!-- Define the map -->
+    <div id="map" style="position: center; height: 800px; width: 800px;"></div>
+    
+    <!-- Feed the map layers -->
+    <script type="text/javascript">
+      
+      var subdomain='irsn-planet.staging.ul2i.fr'
+			var apiKey='jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5NTYwNDYxMC0wMjUzLTQ1NzEtYjYxOC05N2YwYmVmZmY0MjMiLCJuYW1lIjoiaXJzbi1wbGFuZXQtZG9jIiwiYXVkIjoiaXJzbi1wbGFuZXQuc3RhZ2luZy51bDJpLmZyIiwiaXNzIjoia2FsaXNpbyIsImlhdCI6MTUxNjIzOTAyMn0.Je6n8dXFyH8pIGlc5E1oWj91YBCuAPl58H6NfDSW9Dk'
+      
+      // Here are the basemaps definition
+      var basemaps = [
+        L.tileLayer('https://data.geopf.fr/private/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&apikey=ign_scan_ws&VERSION=1.0.0&LAYER=GEOGRAPHICALGRIDSYSTEMS.MAPS.SCAN25TOUR&STYLE=normal&FORMAT=image/jpeg&TILEMATRIXSET=PM&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}', {
+          attribution: '<a href="http://jawg.io" title="Tiles Courtesy of Jawg Maps" target="_blank">&copy; <b>Jawg</b>Maps</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+          maxZoom: 22,
+          tileSize : 256,
+        }),
+        L.tileLayer('https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=HR.ORTHOIMAGERY.ORTHOPHOTOS&STYLE=normal&FORMAT=image/jpeg&TILEMATRIXSET=PM&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}', {
+          attribution: '<a href="http://jawg.io" title="Tiles Courtesy of Jawg Maps" target="_blank">&copy; <b>Jawg</b>Maps</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+          maxZoom: 22,
+          tileSize : 256,
+        }),
+        L.tileLayer.provider('OpenTopoMap'),
+        L.tileLayer.provider('CyclOSM'),
+        L.tileLayer.provider('OpenStreetMap.Mapnik'),
+      ];
+      
+      // Here is the map configuration and the controls
+      var map = L.map('map', {
+        center: [46.01055, 6.34217],
+        zoom: 13
+      });
+
+      map.addControl(L.control.basemaps({
+        basemaps: basemaps,
+        tileX: 66,  // tile X coordinate
+        tileY: 46,  // tile Y coordinate
+        tileZ: 7   // tile zoom  
+      }));
+    </script>
+  </body>
+</html>
+    
