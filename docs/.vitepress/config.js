@@ -1,12 +1,29 @@
-// .vitepress/config.js
-export default {
-    // site-level options
-    title: 'VitePress',
-    description: 'Just playing around.',
-    themeConfig: {
-        // theme-level options
-        },    
-    ignoreDeadLinks: true // <-- this will still warn users on dead links but won't throw error
-                          // default value is false, i.e. builds will fail on encountering dead links
+import { defineConfig } from 'vitepress'
+
+// https://vitepress.dev/reference/site-config
+export default defineConfig({
+  title: "VitePress Website",
+  description: "Website realised by Adrien KNOBLOCH to display my map",
+  ignoreDeadLinks: true,
+  themeConfig: {
+    // https://vitepress.dev/reference/default-theme-config
+    nav: [
+      { text: 'Home', link: '/' },
+      { text: 'Examples', link: '/markdown-examples' }
+    ],
+
+    sidebar: [
+      {
+        text: 'Examples',
+        items: [
+          { text: 'Markdown Examples', link: '/markdown-examples' },
+          { text: 'Runtime API Examples', link: '/api-examples' }
+        ]
+      }
+    ],
+
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+    ]
   }
-  
+})
