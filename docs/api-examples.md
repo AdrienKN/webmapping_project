@@ -2,7 +2,7 @@
 outline: deep
 ---
 
-<iframe width="100%" height="600" src="../test_leaflet.html" style="border: none" />
+<iframe width="100%" height="600" src="/test_leaflet.html" style="border: none" />
 
 # Runtime API Examples
 

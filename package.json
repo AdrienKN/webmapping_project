@@ -2,9 +2,15 @@
   "dependencies": {
     "leaflet": "^1.9.4",
     "leaflet-basemaps": "^0.3.4",
-    "leaflet-providers": "^2.0.0"
+    "leaflet-providers": "^2.0.0",
+    "vue": "^3.2.47"
   },
   "devDependencies": {
+    "@vitejs/plugin-vue": "^4.1.0",
+    "@whyframe/core": "^0.1.9",
+    "@whyframe/vue": "^0.1.6",
+    "vite": "^4.4.9",
+    "vite-plugin-inspect": "^0.7.18",
     "vitepress": "^1.0.0-rc.36"
   },
   "scripts": {
