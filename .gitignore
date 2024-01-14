@@ -1,0 +1,12 @@
+# node
+node_modules
+
+# vitepress
+dist
+cache
+
+
+# backup drawio
+*.dtmp
+*.bkp
+
