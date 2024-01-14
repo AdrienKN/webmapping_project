@@ -1,8 +1,8 @@
 // .vitepress/config.js
 export default {
   // site-level options
-  title: 'VitePress',
-  description: 'Just playing around.',
+  title: 'VitePress Website',
+  description: 'Website realised by Adrien KNOBLOCH to display my map',
   themeConfig: {
       // theme-level options
       },    
