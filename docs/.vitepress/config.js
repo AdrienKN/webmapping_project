@@ -3,12 +3,10 @@ export default {
   base: '/webmapping_project/',
   ignoreDeadLinks: true,
   head: [
-    ['link', { rel: "icon", type: "image/png", sizes: "256x256", href: "/logo_ensat.png"}],
+    ['link', { rel: "icon", type: "image/png", sizes: "300x126", href: "/assets/logo_ensat.png"}],
   ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    siteTitle: false,
-    logo: '/logo_ensat.png',
     socialLinks: [
       {
         icon: {
