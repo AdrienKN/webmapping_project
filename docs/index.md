@@ -3,15 +3,15 @@
 layout: home
 
 hero:
-  name: "Webmapping Project"
-  text: "My VitePress Site"
-  tagline: My great project tagline
+  name: "Coucou ma p'tite femme"
+  text: "Alors ? Est ce que je suis pas ton informaticien/ingénieur agro préféré ?"
+  tagline: Made by hand in the pain by Adrien ZEBEST
   actions:
     - theme: brand
-      text: Markdown Examples
+      text: Inutile
       link: /markdown-examples
     - theme: alt
-      text: API Examples
+      text: Voir ma carte super sex
       link: /api-examples
 
 features:
