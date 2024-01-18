@@ -8,18 +8,18 @@ hero:
   tagline: Made by hand in the pain by Adrien ZEBEST
   actions:
     - theme: brand
-      text: Inutile
-      link: /markdown-examples
+      text: Le code
+      link: /map
     - theme: alt
-      text: Voir ma carte super sex
-      link: /api-examples
+      text: La carte
+      link: /code
 
 features:
-  - title: Qualité 1
+  - title: Ecole Nationale Supérieure Agronomique de Toulouse
     details: Je suis HYPER fort en sexe
-  - title: Qualité 2
-    details: Je suis HYPER fort en informatique
-  - title: Qualité 3 
+  - title: Master SIGMA
+    details: 
+  - title: Université Jean-Jaurès 
     details: J'adore le Vélo
 ---
 
