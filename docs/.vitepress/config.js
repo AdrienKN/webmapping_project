@@ -1,12 +1,14 @@
-export default {
+export default ({
   title: 'Website Adrien KNOBLOCH',
   base: '/webmapping_project/',
   ignoreDeadLinks: true,
   head: [
-    ['link', { rel: "icon", type: "image/png", sizes: "300x126", href: "/assets/logo_ensat.png"}],
+    ['link', { rel: "icon", sizes: "32x32", type: "image/png", href: "/inp_logo.png"}],
   ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+    logo: '/inp_logo.png',
+    siteTitle: false,
     socialLinks: [
       {
         icon: {
@@ -29,4 +31,4 @@ export default {
       copyright: 'Copyright © 2023 - Adrien KNOBLOCH'
     }
   }
-}
+})
