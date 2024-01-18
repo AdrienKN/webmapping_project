@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "Coucou ma p'tite femme"
-  text: "Alors ? Est ce que je suis pas ton informaticien/ingénieur agro préféré ?"
+  text: "Who's the boss ?"
   tagline: Made by hand in the pain by Adrien ZEBEST
   actions:
     - theme: brand
@@ -15,11 +15,11 @@ hero:
       link: /api-examples
 
 features:
-  - title: Feature AA
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Qualité 1
+    details: Je suis HYPER beau
+  - title: Qualité 2
+    details: Je suis HYPER fort en informatique
+  - title: Qualité 3 
+    details: J'adore le Vélo
 ---
 
