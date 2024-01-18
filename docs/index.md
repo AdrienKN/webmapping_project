@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "Coucou ma p'tite femme"
+  name: "Projet webmapping"
   text: "Who's the boss ?"
   tagline: Made by hand in the pain by Adrien ZEBEST
   actions:
@@ -16,7 +16,7 @@ hero:
 
 features:
   - title: Qualité 1
-    details: Je suis HYPER beau
+    details: Je suis HYPER fort en sexe
   - title: Qualité 2
     details: Je suis HYPER fort en informatique
   - title: Qualité 3 
