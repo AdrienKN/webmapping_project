@@ -3,7 +3,7 @@ export default ({
   base: '/webmapping_project/',
   ignoreDeadLinks: true,
   head: [
-    ['link', { rel: "icon", sizes: "32x32", type: "image/png", href: "/inp_logo.png"}],
+    ['link', { rel: "icon", sizes: "150x150", type: "svg", href: "/accueil_logo.svg"}]
   ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
