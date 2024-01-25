@@ -9,7 +9,7 @@ Dans cette première partie du code, j'importe les différentes librairies néce
 - [leaflet-providers](https://github.com/leaflet-extras/leaflet-providers.git) : fournisseur de fonds de carte pour Leaflet.
 - [leaflet-basemaps](https://github.com/consbio/Leaflet.Basemaps) : contrôle de fond de carte par tuiles pour Leaflet.
 
-```md
+```html
   <head>
     <!-- Add dependencies: Leaflet, leaflet-basemap, leaflet-providers-->
     <link rel="stylesheet" href="leaflet/dist/leaflet.css" />
@@ -22,10 +22,11 @@ Dans cette première partie du code, j'importe les différentes librairies néce
 
 ## La carte
 Je définis la div contenant la carte ainsi que son emprise par défaut.
-```md    
+```html
     <!-- Define the map -->
 		<div id="map" style="position: absolute; top: 0; left:0; bottom:0; right: 0;"></div>
-
+```
+```js
     // Here is the map configuration and the controls
       var map = L.map('map', {
         center: [46.01055, 6.34217],
@@ -36,10 +37,8 @@ Je définis la div contenant la carte ainsi que son emprise par défaut.
 ## Les fonds de carte
 Je renseigne les différents fonds de carte à utiliser dans la variable **basemaps**, que l'on parcours ensuite sur la carte grâce à la fonction **map.addControl(L.control.basemaps)**
 
-```md    
-    <!-- Feed the map layers -->
-    <script type="text/javascript">
-       
+```js
+      
       // Here are the basemaps definition
       var basemaps = [
         L.tileLayer('https://data.geopf.fr/private/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&apikey=ign_scan_ws&VERSION=1.0.0&LAYER=GEOGRAPHICALGRIDSYSTEMS.MAPS.SCAN25TOUR&STYLE=normal&FORMAT=image/jpeg&TILEMATRIXSET=PM&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}', {
