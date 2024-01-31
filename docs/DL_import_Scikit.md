@@ -32,6 +32,26 @@
 ```py
     np.where(y_test != y_pred_test)[0]
 ```
+## Metrics
+#### MSE
+```py
+    from sklearn.metrics import mean_squared_error as MSE
+        mse = MSE(y, y_pred)
+
+    from sklearn.metrics import accuracy_score as  OA
+```
+#### Confusion Matrix & Display
+```py
+    from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
+        cm = confusion_matrix(y_test, model.predict(X_test), labels=np.unique(y))
+        disp = ConfusionMatrixDisplay(confusion_matrix=cm,display_labels=np.unique(y))
+        disp.plot()
+```
+## [Model Selection](https://mfauvel.frama.io/machine-learning/#org9459dc8)
+#### [Kfold & Grid](https://mfauvel.frama.io/machine-learning/#org7727b4c)
+```py
+    from sklearn.model_selection import StratifiedKFold, GridSearchCV
+```
 ## Linear model
 ##### [Regression](https://mfauvel.frama.io/machine-learning/#orgb3d0da1) and [Extended linear models](https://mfauvel.frama.io/machine-learning/#org63bfeb3)
 ```py
@@ -74,26 +94,6 @@
 ```py
     from sklearn.ensemble import RandomForestClassifier as RF
 ```
-## Metrics
-#### MSE
-```py
-    from sklearn.metrics import mean_squared_error as MSE
-        mse = MSE(y, y_pred)
-
-    from sklearn.metrics import accuracy_score as  OA
-```
-#### Confusion Matrix & Display
-```py
-    from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
-        cm = confusion_matrix(y_test, model.predict(X_test), labels=np.unique(y))
-        disp = ConfusionMatrixDisplay(confusion_matrix=cm,display_labels=np.unique(y))
-        disp.plot()
-```
-## [Model Selection](https://mfauvel.frama.io/machine-learning/#org9459dc8)
-#### [Kfold & Grid](https://mfauvel.frama.io/machine-learning/#org7727b4c)
-```py
-    from sklearn.model_selection import StratifiedKFold, GridSearchCV
-```
 ## Data transfomration
 #### [Feature scaling & Normalisation](https://mfauvel.frama.io/machine-learning/#orgfada680)
 ```py
@@ -104,8 +104,6 @@
 ```py
     model.feature_importances_
 ```
-https://mfauvel.frama.io/machine-learning/#:~:text=5.2.%20Feature%20reduction
-
 #### [Extract feature with PCA](https://mfauvel.frama.io/machine-learning/#org18c15e4)
 ```py
     from sklearn.decomposition import PCA
