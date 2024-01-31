@@ -1,6 +1,7 @@
 
 # Import Deep Learning
-### Import de base
+## Base imports
+#### Numpy
 ```py
     import numpy as np
         #Generate rdm point
@@ -11,12 +12,12 @@
 ```py
     from sklearn.model_selection import train_test_split
 ```
-## Import Visualisation
+#### Import Visualisation
 ```py
     import matplotlib.pyplot as plt
 ```
 
-## Import Dataset Scikit
+#### Import Dataset Scikit
 ```py
     from sklearn.datasets import data 
         - load_digits - fetch_california_housing - make_blobs
@@ -106,4 +107,49 @@
 ```py
     from sklearn.preprocessing import StandardScaler
     from sklearn.feature_selection import SequentialFeatureSelector as  SFS
+```
+## Loop example for cross-validation
+```py
+from sklearn.datasets import load_diabetes
+from sklearn.model_selection import StratifiedKFold, GridSearchCV, train_test_split
+from sklearn.ensemble import RandomForestRegressor as RF
+from sklearn.neighbors import KNeighborsRegressor as KNN
+from sklearn.linear_model import Ridge as RID
+from sklearn.metrics import mean_squared_error as MSE
+
+# Load data
+X, y = load_diabetes(return_X_y=True)
+
+# Split data
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, train_size=0.5, random_state=0)
+
+# Define hyperparameters
+param_RID = {"alpha": [0.001, 0.01, 0.1, 1, 10]}
+param_KNN = {"n_neighbors": [1, 5, 10, 50],
+                "weights": ['uniform', 'distance']}
+param_RF = {"n_estimators": [1, 10, 50, 100, 200, 400, 600],
+          "max_depth": [1, 5, 10, 15, 20, 25]}
+
+# Test models with best hyperparameters
+for name, model, params in zip(["Ridge regression", "KN Neighbors", "Random Forest Regressor" ],
+                            [RID(), KNN(), RF()],
+                            [param_RID, param_KNN, param_RF]) :
+    # Define the model
+    model.fit(X_train, y_train)
+    # Do Cross Validation
+    grid = GridSearchCV(model,  # Set up the classifier
+                        param_grid=params, cv= 5,
+                        refit=True, n_jobs=-1) # Do the grid search in parallel
+    grid.fit(X_train, y_train) # Run the grid search
+    
+    print(f"for the model {model}, best parameters are : {grid.best_params_} with a score of {grid.best_estimator_.score(X_test, y_test):.2f}")
+
+print(f"We will perfom the modeling with {grid.best_estimator_}, with a score of {grid.best_estimator_.score(X_test, y_test):.2f}")
+# Train model
+best_estimator = grid.best_estimator_
+best_estimator.fit(X_train, y_train)
+
+print(f"Accuracy score on train dataset : {best_estimator.score(X_train, y_train)}")
+print(f"Accuracy score on test dataset : {best_estimator.score(X_test, y_test)}")
 ```
