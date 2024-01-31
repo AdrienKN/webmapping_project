@@ -7,7 +7,12 @@
         #Generate rdm point
         t = np.linspace(0,100,50).reshape(-1, 1)
 ```
-
+#### Import Dataset Scikit
+```py
+    from sklearn.datasets import data 
+        - load_digits - fetch_california_housing - make_blobs
+            X, y = make_blobs(n_samples=100, centers=3, n_features=2, random_state=0)
+```
 #### Split Samples
 ```py
     from sklearn.model_selection import train_test_split
@@ -16,25 +21,29 @@
 ```py
     import matplotlib.pyplot as plt
 ```
-
-#### Import Dataset Scikit
+#### Polyonomial and Pipeline
 ```py
-    from sklearn.datasets import data 
-        - load_digits - fetch_california_housing - make_blobs
-            X, y = make_blobs(n_samples=100, centers=3, n_features=2, random_state=0)
+    from sklearn.preprocessing import PolynomialFeatures
+
+    from sklearn.pipeline import Pipeline
+        Pipeline([("PolyTransform", PolynomialFeatures(2)), ("LinearReg", LinearRegression())])
+```
+#### Check Wrong prediction
+```py
+    np.where(y_test != y_pred_test)[0]
 ```
 ## Linear model
-##### Regression
+##### [Regression](https://mfauvel.frama.io/machine-learning/#orgb3d0da1) and [Extended linear models](https://mfauvel.frama.io/machine-learning/#org63bfeb3)
 ```py
     from sklearn.linear_model import LinearRegression
     from sklearn.linear_model import Ridge
     from sklearn.linear_model import Lasso
 ```
-##### Classification
+##### [Classification](https://mfauvel.frama.io/machine-learning/#org9422944)
 ```py
     from sklearn.linear_model import LogisticRegression as LR
 ```
-## Knn model
+## [Knn model](https://mfauvel.frama.io/machine-learning/#orgf9e49fa)
 ##### Regression
 ```py
     from sklearn.neighbors import KNeighborsRegressor
@@ -44,7 +53,7 @@
     from sklearn.neighbors import KNeighborsClassifier 
         model = KNeighborsClassifier(n_neighbors= n)
 ```
-## Decision tree model
+## [Decision tree model](https://mfauvel.frama.io/machine-learning/#org9edec57)
 ```py
     from sklearn import tree
 ```
@@ -56,7 +65,7 @@
 ```py
     from sklearn.tree import DecisionTreeClassifier
 ```
-## Rdm Forest model
+## [Rdm Forest model](https://mfauvel.frama.io/machine-learning/#orgf538d32)
 ##### Regression
 ```py
     from sklearn.ensemble import RandomForestRegressor
@@ -65,15 +74,6 @@
 ```py
     from sklearn.ensemble import RandomForestClassifier as RF
 ```
-
-## Polyonomial and Pipeline
-```py
-    from sklearn.preprocessing import PolynomialFeatures
-
-    from sklearn.pipeline import Pipeline
-        Pipeline([("PolyTransform", PolynomialFeatures(2)), ("LinearReg", LinearRegression())])
-```
-
 ## Metrics
 #### MSE
 ```py
@@ -89,25 +89,28 @@
         disp = ConfusionMatrixDisplay(confusion_matrix=cm,display_labels=np.unique(y))
         disp.plot()
 ```
-# Model Selection
-### kfold & Grid
+## [Model Selection](https://mfauvel.frama.io/machine-learning/#org9459dc8)
+#### [Kfold & Grid](https://mfauvel.frama.io/machine-learning/#org7727b4c)
 ```py
     from sklearn.model_selection import StratifiedKFold, GridSearchCV
 ```
-#### Check Wrong prediction
-```py
-    np.where(y_test != y_pred_test)[0]
-```
-#### Check feature importances
-```py
-    model.feature_importances_
-```
-
-#### Feature scaling & Normalisation
+## Data transfomration
+#### [Feature scaling & Normalisation](https://mfauvel.frama.io/machine-learning/#orgfada680)
 ```py
     from sklearn.preprocessing import StandardScaler
     from sklearn.feature_selection import SequentialFeatureSelector as  SFS
 ```
+#### [Select feature by importance](https://mfauvel.frama.io/machine-learning/#org35ca385)
+```py
+    model.feature_importances_
+```
+https://mfauvel.frama.io/machine-learning/#:~:text=5.2.%20Feature%20reduction
+
+#### [Extract feature with PCA](https://mfauvel.frama.io/machine-learning/#org18c15e4)
+```py
+    from sklearn.decomposition import PCA
+```
+
 ## Loop example for cross-validation
 ```py
 from sklearn.datasets import load_diabetes
