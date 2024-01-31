@@ -11,17 +11,19 @@ export default ({
         text: 'Catégories',
         items: [
           { text: 'Découvrir le code', link: '/code' },
-          { text: 'Afficher la carte', link: '/map' }
+          { text: 'Afficher la carte', link: '/map' },
+          { text: 'Cheatcode FAUVEL', link: '/DL_import_Scikit.md' }
         ]
       }
     ],
     nav: [
-      { text: 'Accueil', link: '/index' },
+      { text: 'FAUVEL', link: '/DL_import_Scikit.md' },
+      { text: 'Accueil', link: '/index' },      
       {
         text: 'Menu',
         items: [
           { text: 'Découvrir le code', link: '/code' },
-          { text: 'Afficher la carte', link: '/code' }
+          { text: 'Afficher la carte', link: '/code' },
         ]
       }
     ],

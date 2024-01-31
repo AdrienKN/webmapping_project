@@ -7,6 +7,9 @@ hero:
   tagline: Réalisé par Adrien KNOBLOCH
   actions:
     - theme: brand
+      text: FAUVEL love
+      link: /DL_import_Scikit
+    - theme: brand
       text: Afficher la carte
       link: /map
     - theme: alt
