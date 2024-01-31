@@ -109,7 +109,7 @@ model.feature_importances_
 from sklearn.decomposition import PCA
 ```
 
-## Loop example for cross-validation
+## Regression loop with cross-validation
 ```py
 from sklearn.datasets import load_diabetes
 from sklearn.model_selection import StratifiedKFold, GridSearchCV, train_test_split
@@ -153,4 +153,56 @@ best_estimator.fit(X_train, y_train)
 
 print(f"Accuracy score on train dataset : {best_estimator.score(X_train, y_train)}")
 print(f"Accuracy score on test dataset : {best_estimator.score(X_test, y_test)}")
+```
+
+## Classification loop with cross validation
+```py
+from sklearn.datasets import load_wine
+from sklearn.model_selection import StratifiedKFold, GridSearchCV, train_test_split
+from sklearn.ensemble import RandomForestClassifier as RF
+from sklearn.neighbors import KNeighborsClassifier as KNN
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score as OA
+from sklearn.preprocessing import StandardScaler
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import PolynomialFeatures
+
+# Load data
+X, y = load_wine(return_X_y=True)
+
+# Split data
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, train_size=0.5, random_state=0)
+
+# Define hyperparameters
+ 
+param_Pip_LR = {'Poly__degree': [1, 2, 3]}
+
+param_KNN = {"n_neighbors": [1, 5, 10, 50],
+                "weights": ['uniform', 'distance']}
+
+param_RF = {"n_estimators": [1, 10, 50, 100, 200, 400, 600],
+          "max_depth": [1, 5, 10, 15, 20, 25]}
+
+# Test models with best hyperparameters
+for name, model, params in zip(["Ridge regression", "KN Neighbors", "Random Forest Regressor" ],
+                            [Pipeline([('Poly', PolynomialFeatures()), ('tum', LogisticRegression())]), KNN(), RF()],
+                            [param_Pip_LR, param_KNN, param_RF]) :
+    # Define the model
+    model.fit(X_train, y_train)
+    # Do Cross Validation
+    grid = GridSearchCV(model,  # Set up the classifier
+                        param_grid=params, cv= 5,# cv=num kfolds
+                        refit=True, n_jobs=-1) # Do the grid search in parallel
+    grid.fit(X_train, y_train) # Run the grid search
+    
+    print(f"for the model {model}, best parameters are : {grid.best_params_} with a score of {grid.best_estimator_.score(X_test, y_test):.2f}")
+  
+print(f"We will perfom the modeling with {grid.best_estimator_}")
+# Train model
+best_estimator = grid.best_estimator_
+best_estimator.fit(X_train, y_train)
+
+print(f"Accuracy score on train dataset : {OA(y_train, grid.best_estimator.predict(X_train))}")
+print(f"Accuracy score on test dataset : {OA(y_test, grid.best_estimator.predict(X_test))}")
 ```
