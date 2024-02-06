@@ -3,6 +3,7 @@
     "leaflet": "^1.9.4",
     "leaflet-basemaps": "^0.3.4",
     "leaflet-providers": "^2.0.0",
+    "leaflet.control.opacity": "^1.6.0",
     "vue": "^3.2.47"
   },
   "devDependencies": {

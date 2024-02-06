@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="leaflet-basemaps/L.Control.Basemaps.css" />
     <script src="leaflet-basemaps/L.Control.Basemaps-min.js"></script>
     <script src="leaflet-providers/leaflet-providers.js"></script>
+    <script src="leaflet-control-opacity/L.Control.Opacity.js"></script>
+    <link href="leaflet-control-opacity/L.Control.Opacity.css" rel="stylesheet" />
   </head>
   <body>
     
@@ -35,14 +37,22 @@
         }),
         L.tileLayer.provider('OpenTopoMap'),
         L.tileLayer.provider('CyclOSM'),
-        L.tileLayer.provider('OpenStreetMap.Mapnik')
+        L.tileLayer.provider('OpenStreetMap.Mapnik'),
       ];
-      
+
+      var classif = L.tileLayer.wms('https://www.geotests.net/geoserver/ows?service=WMS', {
+        layers: 'E_Bonhomme:EB_carte_essences_lvl1_fromlvl3',
+        transparent: true
+        })
       // Here is the map configuration and the controls
       var map = L.map('map', {
         center: [46.01055, 6.34217],
-        zoom: 13
+        zoom: 13,
       });
+
+      var overlays = {
+				'Classif lvl1': classif,
+        'Classification lvl2' : classif}
 
       map.addControl(L.control.basemaps({
         position: 'bottomright',
@@ -51,7 +61,14 @@
         tileY: 46,  // tile Y coordinate
         tileZ: 7   // tile zoom  
       }));
-    </script>
+      map.addControl(L.control.layers({}, overlays, {
+        collapsed: false,
+      }));
+      map.addControl(L.control.opacity(overlays, {
+        label: 'Layers opacity',
+        collapsed: false,
+      }));  
+      </script>
   </body>
 </html>
     
