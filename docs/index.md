@@ -7,9 +7,6 @@ hero:
   tagline: Réalisé par Adrien KNOBLOCH
   actions:
     - theme: brand
-      text: FAUVEL
-      link: /DL_import_Scikit
-    - theme: brand
       text: Afficher la carte
       link: /map
     - theme: alt
@@ -22,6 +19,6 @@ features:
   - title: Master SIGMA
     details: 
   - title: Université Jean-Jaurès 
-    details: J'adore le Vélo
+    details:
 ---
 

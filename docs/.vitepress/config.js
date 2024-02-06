@@ -16,7 +16,6 @@ export default ({
       }
     ],
     nav: [
-      { text: 'FAUVEL', link: '/DL_import_Scikit.md' },
       { text: 'Accueil', link: '/index' },      
       {
         text: 'Menu',
