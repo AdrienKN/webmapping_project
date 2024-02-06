@@ -42,17 +42,16 @@
 
       var classif1 = L.tileLayer.wms('https://www.geotests.net/geoserver/ows?service=WMS', {
         layers: 'E_Bonhomme:EB_carte_essences_lvl1_fromlvl3',
-        transparent: true
         })
 
       var classif2 = L.tileLayer.wms('https://www.geotests.net/geoserver/ows?service=WMS', {
         layers: 'E_Bonhomme:EB_carte_essences_lvl1_fromlvl3',
-        transparent: true
         })
+
       // Here is the map configuration and the controls
       var map = L.map('map', {
-        center: [46.01055, 6.34217],
-        zoom: 13,
+        center: [43.5988, 1.4391],
+        zoom: 9.5,
       });
 
       var overlays = {
