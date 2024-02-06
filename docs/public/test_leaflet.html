@@ -42,10 +42,14 @@
 
       var classif1 = L.tileLayer.wms('https://www.geotests.net/geoserver/ows?service=WMS', {
         layers: 'E_Bonhomme:EB_carte_essences_lvl1_fromlvl3',
+        transarence: true,
+        format: 'image/png'
         })
 
       var classif2 = L.tileLayer.wms('https://www.geotests.net/geoserver/ows?service=WMS', {
         layers: 'E_Bonhomme:EB_carte_essences_lvl1_fromlvl3',
+        transarence: true,
+        format: 'image/png'
         })
 
       // Here is the map configuration and the controls
@@ -55,7 +59,7 @@
       });
 
       var overlays = {
-				'Classif lvl1': classif1,
+				'Classification lvl1': classif1,
         'Classification lvl2' : classif2}
 
       map.addControl(L.control.basemaps({
