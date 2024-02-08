@@ -21,7 +21,7 @@ export default ({
         text: 'Menu',
         items: [
           { text: 'Découvrir le code', link: '/code' },
-          { text: 'Afficher la carte', link: '/code' },
+          { text: 'Afficher la carte', link: '/map' },
         ]
       }
     ],
