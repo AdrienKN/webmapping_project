@@ -39,43 +39,62 @@
         L.tileLayer.provider('CyclOSM'),
         L.tileLayer.provider('OpenStreetMap.Mapnik'),
       ];
+    
 
-      var classif_lvl3 = L.tileLayer.wms('https://www.geotests.net/geoserver/ows?service=WMS', {
-        layers: 'aknobloc:carte_essences_lvl3',
-        transparent: true,
-        format: 'image/png'
-        })
+    // Define my reference layer I created with my group in teledetection course
+    var classif_lvl3 = L.tileLayer.wms('https://www.geotests.net/geoserver/ows?service=WMS', {
+      layers: 'aknobloc:carte_essences_lvl3',
+      transparent: true,
+      format: 'image/png'
+      })
+    
+    // Define my comparison layer, Anne-Sophie PUINNA and her group created in teledetection course, with my stylesheet 
+    var classif3_P = L.tileLayer.wms('https://www.geotests.net/geoserver/ows?service=WMS', {
+      layers: 'ASPinna:carte_essences_lvl3',
+      styles: "aknobloc:classified_map_style",
+      transparent: true,
+      format: 'image/png',
+      })
+    
 
-      var classif2 = L.tileLayer.wms('https://www.geotests.net/geoserver/ows?service=WMS', {
-        layers: 'm_joffrion:lvl2_from_lvl3',
-        transparent: true,
-        format: 'image/png'
-        })
-var legend = 'https://www.geotests.net/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=aknobloc:carte_essences_lvl3'
-      // Here is the map configuration and the controls
-      var map = L.map('map', {
-        center: [43.5988, 1.4391],
-        zoom: 9.5,
-      });
+    // Here is the map configuration and the controls
+    var map = L.map('map', {
+      center: [43.5988, 1.4391],
+      zoom: 9.5,
+    });
 
-      var overlays = {
-				'Classification lvl3': classif_lvl3,
-        'Classification lvl2' : classif2}
+    var overlays = {
+      'Cropped classification lvl3': classif_lvl3,
+      'Complete classification lvl3' : classif3_P}
 
-      map.addControl(L.control.basemaps({
-        position: 'bottomright',
-        basemaps: basemaps,
-        tileX: 66,  // tile X coordinate
-        tileY: 46,  // tile Y coordinate
-        tileZ: 7   // tile zoom  
-      }));
-      map.addControl(L.control.layers({}, overlays, {
-        collapsed: false,
-      }));
-      map.addControl(L.control.opacity(overlays, {
-        label: 'Layers opacity',
-        collapsed: false,
-      }));  
+    map.addControl(L.control.basemaps({
+      position: 'bottomright',
+      basemaps: basemaps,
+      tileX: 66,  // tile X coordinate
+      tileY: 46,  // tile Y coordinate
+      tileZ: 7   // tile zoom  
+    }));
+    
+    map.addControl(L.control.layers({}, overlays, {
+      collapsed: false,
+    }));
+    
+    map.addControl(L.control.opacity(overlays, {
+      label: 'Layers opacity',
+      collapsed: false,
+    }));
+    
+    //Add forest Legend
+    var legend_simple = L.control({position: 'bottomleft'});
+    legend_simple.onAdd = function (map) {
+        let divlegend = L.DomUtil.create('divlegend');
+        divlegend.innerHTML = ('<div style = "color : black;">  <strong>Forest legend</strong> <br>'+
+        '<img src="https://www.geotests.net/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&transparent=true&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=aknobloc:carte_essences_lvl3" alt="">'+
+        '</div>');
+        return divlegend;
+        };
+    legend_simple.addTo(map);
+
       </script>
   </body>
 </html>

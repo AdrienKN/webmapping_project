@@ -6,17 +6,18 @@ outline: deep
 
 ## Les couches
 
-- classification lvl3 : 
+- Cropped classification lvl3 : 
 
-- classification lvl2 : Créée par le groupe de JOFFRION Martin, je l'utilise ici en guise de référence de comparaison. En effet, ils ont effectué le même travail de classification, avec des hyperparamètres légèrements différents et surtout, une zone de calcul bien plus vaste.
+- Complete classification lvl3 : Créée par le groupe de PINNA Anne-Sophie, je l'utilise ici à titre de comparaison. En effet, ils ont effectué le même travail de classification, avec des hyperparamètres légèrement différents mais surtout, une zone de calcul bien plus vaste.
 
 ### Interprétation de la qualité de classification
-Sur notre zone de travail, on peut ainsi noter visuellement quelques maigres différences de classification. Au niveau de la forêt d'Eaunes, ils ont ainsi plus de pixels résiduels que dans le cas de la notre classification, mais une meilleure détection des zones boisées ou non. 
-Si l'on se concentre sur des zones plus à l'Ouest, en bordure de Garonne, c'est l'inverse : notre classification réduite détecte mieux les zones agricoles que la classification complète.
+Sur notre zone de travail, nous pouvons visuellement noter quelques différences de classification. Au niveau de la forêt d'Eaunes, la classification complète a produit plus de pixels résiduels que dans le cas de notre classification réduite, mais une meilleure détection des zones boisées ou non. 
 
-Ces approximations dans chacune de ces cartes ne permettent pas, dans notre cas d'étude, d'affirmer que la taille de la zone d'étude impacte la qualité des résultats. Le problème est ailleurs, et certainement dans l'inéquilibre représentation des classes. Dans notre classification réduite comme dans celle du groupe de JOFFRION Martin, nous remarqons aisément l'omniprésence de la classe ..., dont la sur-représentation dans la zone d'étude dégrade la qulaité de prédiction.
+Même constat sur les zones plus à l'Ouest : notre classification réduite présente des résultats bien plus uniformes, mais vraissemblablement plus réalistes.
 
-La superposition des couches de classifications avec les images satellites pose aussi la question de la résolution spatiale utilisée. A vue d'oeil, le modèle n'est adapté qu'à l'analyse de groupes d'arbres, composés d'au moins 2 ou 3 individus, où alors d'individus aux caractèristiques dendrométriques très développés. Dans des forêts homogènes, jeunes, à faible diversité spécifique et avec quelques espèces sur-dominantes, une telle résolution ne permet pas d'appréhender efficacement la diversité des populations du milieu.
+Ces approximations ne permettent pas, dans notre cas d'étude, d'affirmer l'impact positif de la taille de la zone d'étude sur la qualité des résultats. Le problème est ailleurs, et certainement dans l'inéquilibre représentation des classes. Dans notre classification réduite comme dans celle du groupe de PINNA Anne-Sophie, nous remarquons aisément l'omniprésence de la classe "Chêne pur^," dont la sur-représentation dans la zone d'étude dégrade la qualité de prédiction.
+
+La superposition des couches de classifications avec les images satellites met en exergue  l'inadéquation entre la problématique étudiée et la résolution spatiale utilisée. A vue d'oeil, le modèle n'est adapté qu'à l'analyse de groupes d'arbres, composés d'au moins 2 ou 3 individus, où alors d'individus aux caractèristiques dendrométriques très développés. Dans des forêts homogènes, jeunes, à faible diversité spécifique et avec quelques espèces sur-dominantes, une telle résolution ne permet pas d'appréhender efficacement la diversité des populations du milieu.
 
 ## Les fonds de carte
 - [IGN SCAN TOPO25](https://geoservices.ign.fr/documentation/donnees/cartes/scan25) : collection d'images cartographiques numériques en couleurs, issue du fonds cartographique au 1 : 25 000 Type 2010.
