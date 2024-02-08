@@ -40,8 +40,8 @@
         L.tileLayer.provider('OpenStreetMap.Mapnik'),
       ];
 
-      var classif1 = L.tileLayer.wms('https://www.geotests.net/geoserver/ows?service=WMS', {
-        layers: 'FelipeAM:NDVI_20220922',
+      var classif_lvl3 = L.tileLayer.wms('https://www.geotests.net/geoserver/ows?service=WMS', {
+        layers: 'aknobloc:carte_essences_lvl3',
         transarence: true,
         format: 'image/png'
         })
@@ -59,7 +59,7 @@
       });
 
       var overlays = {
-				'Classification lvl1': classif1,
+				'Classification lvl3': classif_lvl3,
         'Classification lvl2' : classif2}
 
       map.addControl(L.control.basemaps({
