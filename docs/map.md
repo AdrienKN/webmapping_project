@@ -5,10 +5,19 @@ outline: deep
 <iframe width="100%" height="600" src="test_leaflet.html" style="border: none" />
 
 ## Les couches
+### Les cartes classifiées
+nous avons utilisés 2 cartes classifiées importées sous forme de couches distinctes : 
 
-- Cropped classification lvl3 : 
+- Cropped classification lvl3 : réalisée par JOURDAIN Vincent, et moi-même, elle est issue d'un modèle de classification RandomForesg appliqué à une petite zone d'étude, et donc avec un échantillonnage faible.
 
 - Complete classification lvl3 : Créée par le groupe de PINNA Anne-Sophie, je l'utilise ici à titre de comparaison. En effet, ils ont effectué le même travail de classification, avec des hyperparamètres légèrement différents mais surtout, une zone de calcul bien plus vaste.
+
+### Paramétrage des flux WMS aavec GeoCoder
+La méthode suivie pour la réalisation de cette carte est celle vue dans le cours de M. JEGOUD, à savoir la création et la consommation d'un flux WMS à partir d'un fichier raster GeoTiff depuis le server GeoServer. 
+
+Nous avons ainsi importé notre carte classifié sur le GeoServer, paramètré le flux WMS correspondant et créé un style approprié. 
+
+Nous avons ensuite importé la carte du groupe d'Anne-Sophie PINNA en y applicant le même fichier de style que précédemment, afin de faciliter la comparaison avec notre carte. 
 
 ### Interprétation de la qualité de classification
 Sur notre zone de travail, nous pouvons visuellement noter quelques différences de classification. Au niveau de la forêt d'Eaunes, la classification complète a produit plus de pixels résiduels que dans le cas de notre classification réduite, mais une meilleure détection des zones boisées ou non. 
