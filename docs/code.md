@@ -122,7 +122,7 @@ map.addControl(L.control.opacity(overlays, {
     }));
 ```
 
-### La légende
+## La légende
 
 Pour afficher la légende commune aux 2 couches, nous créons d'abord la variable *legend_simple*, contenant les informations positionnelles du futur encart.
 
