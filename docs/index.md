@@ -14,11 +14,19 @@ hero:
       link: /code
 
 features:
-  - title: Ecole Nationale Supérieure Agronomique de Toulouse
-    details: 
-  - title: Master SIGMA
-    details: 
-  - title: Université Jean-Jaurès 
-    details:
+  - icon: 
+      light: /light_logo_ensat.png
+      dark: /dark_logo_ensat.png
+      width: 100
+    details: INP ENSAT
+  - icon: 
+      src: /logo_sigma.jpg
+      width: 150
+    details:  Master Géomatique SIGMA
+  - icon:
+      light : /light_logo_uni.png
+      dark: /dark_logo_uni.jpg
+      width: 100
+    details: Université de Toulouse 
 ---
 

@@ -21,12 +21,12 @@
       // Here are the basemaps definition
       var basemaps = [
         L.tileLayer('https://data.geopf.fr/private/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&apikey=ign_scan_ws&VERSION=1.0.0&LAYER=GEOGRAPHICALGRIDSYSTEMS.MAPS.SCAN25TOUR&STYLE=normal&FORMAT=image/jpeg&TILEMATRIXSET=PM&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}', {
-          attribution: '<a href="http://jawg.io" title="Tiles Courtesy of Jawg Maps" target="_blank">&copy; <b>Jawg</b>Maps</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+          attribution: '<a href="https://www.geoportail.gouv.fr/" title="Scan25 Topo IGN" target="_blank">&copy; <b>Scan25 Topo</b></a> &copy; <a href="https://www.geoportail.gouv.fr/">IGN</a>',
           maxZoom: 22,
           tileSize : 256,
         }),
         L.tileLayer('https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=HR.ORTHOIMAGERY.ORTHOPHOTOS&STYLE=normal&FORMAT=image/jpeg&TILEMATRIXSET=PM&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}', {
-          attribution: '<a href="http://jawg.io" title="Tiles Courtesy of Jawg Maps" target="_blank">&copy; <b>Jawg</b>Maps</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+          attribution: '<a href="https://www.geoportail.gouv.fr/" title="Orthophotos IGN" target="_blank">&copy; <b>Orthophotos</b></a> &copy; <a href="https://www.geoportail.gouv.fr/">IGN</a>',
           maxZoom: 22,
           tileSize : 256,
         }),
@@ -37,7 +37,6 @@
         }),
         L.tileLayer.provider('OpenTopoMap'),
         L.tileLayer.provider('CyclOSM'),
-        L.tileLayer.provider('OpenStreetMap.Mapnik'),
       ];
     
 
@@ -49,7 +48,7 @@
       })
     
     // Define my comparison layer, Anne-Sophie PUINNA and her group created in teledetection course, with my stylesheet 
-    var classif3_P = L.tileLayer.wms('https://www.geotests.net/geoserver/ows?service=WMS', {
+    var classif_lvl3_P = L.tileLayer.wms('https://www.geotests.net/geoserver/ows?service=WMS', {
       layers: 'ASPinna:carte_essences_lvl3',
       styles: "aknobloc:classified_map_style",
       transparent: true,
@@ -65,7 +64,7 @@
 
     var overlays = {
       'Cropped classification lvl3': classif_lvl3,
-      'Complete classification lvl3' : classif3_P}
+      'Complete classification lvl3' : classif_lvl3_P}
 
     map.addControl(L.control.basemaps({
       position: 'bottomright',

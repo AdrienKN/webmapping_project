@@ -4,8 +4,7 @@ export default ({
   ignoreDeadLinks: true,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    logo: '/logo_uni.jpg',
-    siteTitle: "UFTMP",
+    siteTitle: "Projet webmapping",
     sidebar: [
       {
         text: 'Catégories',
@@ -34,13 +33,16 @@ export default ({
         }, 
         link: 'https://fr.linkedin.com/in/adrien-knobloch-01a817217' },
     ],
-    outlineTitle: 'Sommaire',
+    outline: {
+      level: 2, 
+      label: 'Sommaire',
+      },
     docFooter: {
       prev: 'Page précédente',
       next: 'Page suivante'
     },
     footer: {
-      copyright: 'Copyright © 2023 - Adrien KNOBLOCH'
+      copyright: 'Copyright © 2024 - Adrien KNOBLOCH'
     }
   }
 })
