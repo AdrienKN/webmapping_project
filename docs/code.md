@@ -112,7 +112,7 @@ map.addControl(L.control.layers({}, overlays, {
     }));
 ```
 
-## Le contrôle d'opacité
+## Le contrôleur d'opacité
 
 Nous affichons le controleur d'opacité pour les couches stockées dans la variable *overlays* à l'aide de la fonction ***map.addControl(L.control.opacity())***, en renseignant le nom à afficher dans la fenêtre finale. 
 
@@ -149,4 +149,16 @@ legend_simple.onAdd = function (map) {
 legend_simple.addTo(map);
 
 ```
+
+## Perspectives d'améliorations
+Le code présenté ci-dessus est proie à de nombreuses améliorations, la première étant l'ajout d'une legende dynamique. 
+
+Sur la carte actuelle, la légende est figée. Nous affichons simplement l'image reçue de *Geocoder* dans le coin gauche de la fenêtre. 
+
+L'étape suivante serait donc de proposer une légende dynamique, fonction de la couche sélectionnée par l'utilisateur. 
+
+Nous pourrions également travailler sur la donnée source, pour en améliorer l'interactivité de la représentation. 
+
+En vectorisant notre image et en lui paramétrant un flux WFS, nous pourrions afficher une carte dynamique, où les attributs de chaque feature seraient visible au survol.
+ 
 
