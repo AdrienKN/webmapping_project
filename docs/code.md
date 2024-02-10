@@ -157,7 +157,7 @@ Sur la carte actuelle, la légende est figée. Nous affichons simplement l'image
 
 L'étape suivante serait donc de proposer une légende dynamique, fonction de la couche sélectionnée par l'utilisateur. 
 
-Nous pourrions également travailler sur la donnée source, pour en améliorer l'interactivité de la représentation. 
+Nous pourrions également travailler sur la donnée source et ainsi améliorer l'interactivité de sa représentation. 
 
 En vectorisant notre image et en lui paramétrant un flux WFS, nous pourrions afficher une carte dynamique, où les attributs de chaque feature seraient visible au survol.
  
