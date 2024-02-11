@@ -151,7 +151,7 @@ legend_simple.addTo(map);
 ```
 
 ## Perspectives d'améliorations
-Le code présenté ci-dessus est proie à de nombreuses améliorations, la première étant l'ajout d'une legende dynamique. 
+Le code présenté ci-dessus est proie à de nombreuses améliorations, la première étant l'ajout d'une légende dynamique. 
 
 Sur la carte actuelle, la légende est figée. Nous affichons simplement l'image reçue de *Geocoder* dans le coin gauche de la fenêtre. 
 
@@ -159,6 +159,6 @@ L'étape suivante serait donc de proposer une légende dynamique, fonction de la
 
 Nous pourrions également travailler sur la donnée source et ainsi améliorer l'interactivité de sa représentation. 
 
-En vectorisant notre image et en lui paramétrant un flux WFS, nous pourrions afficher une carte dynamique, où les attributs de chaque feature seraient visible au survol.
+En vectorisant notre image et en lui paramétrant un flux WFS, nous pourrions afficher une carte dynamique, où les attributs de chaque feature seraient visibles au survol.
  
 
