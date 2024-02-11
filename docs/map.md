@@ -30,7 +30,7 @@ Nous avons ainsi importé notre carte classifié sur *GeoServer*, paramètré le
 
 Nous avons ensuite importé la carte du groupe d'Anne-Sophie PINNA en y applicant le même style que notre première carte, afin d'en faciliter la comparaison. 
 
-### Interprétation de la qualité de classification
+### Interprétation et discussion de la qualité de classification
 #### Observations qualitatives
 Sur notre zone de travail, nous pouvons visuellement noter quelques différences de classification. Au niveau de la forêt d'Eaunes, la classification complète a produit plus de pixels résiduels que dans le cas de notre classification réduite. La classification complète offre aussi une meilleure détection des frontières entre zones boisées et zones urbaines ou agricoles. 
 
