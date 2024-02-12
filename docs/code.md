@@ -2,7 +2,6 @@
 outline: deep
 ---
 
-# Le code
 ## Les dépendances
 Dans cette première partie du code, nous importons les différentes librairies nécessaires à l'affichage de la carte, à savoir :
  
