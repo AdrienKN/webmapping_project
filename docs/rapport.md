@@ -2,7 +2,7 @@
 outline: deep
 ---
 # Rapport UE Webmapping
-Ce rapport retrace le travail de création d'une carte web dynamique à l'aide de la librairie [leaflet](https://github.com/Leaflet/Leaflet) et du framework [Vitepress](https://vitepress.dev/). Le résultat final esi visble [ici](https://adrienkn.github.io/webmapping_project/). 
+Ce rapport retrace le travail de création d'une carte web dynamique à l'aide de la librairie [leaflet](https://github.com/Leaflet/Leaflet) et du framework [Vitepress](https://vitepress.dev/). Le résultat final est visible [ici](https://adrienkn.github.io/webmapping_project/). 
 
 Nous étudierons dans un premier temps les différentes composantes de la carte, puis le script général du projet.
 
