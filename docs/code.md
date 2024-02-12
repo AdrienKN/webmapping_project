@@ -8,7 +8,7 @@ Dans cette première partie du code, nous importons les différentes librairies 
  
 - [leaflet](https://github.com/Leaflet/Leaflet) : bibliothèque JavaScript libre de cartographie en ligne développée par l'ukrainien Vladimir Agafonkin de CloudMade et de nombreux contributeurs.
 - [leaflet-providers](https://github.com/leaflet-extras/leaflet-providers.git) : fournisseur de fonds de carte pour Leaflet.
-- [leaflet-basemaps](https://github.com/consbio/Leaflet.Basemaps) : contrôle de fond de carte par tuiles pour Leaflet.
+- [leaflet-basemaps](https://github.com/consbio/Leaflet.Basemaps) : contrôle de fonds de carte par tuile pour Leaflet.
 - [leaflet-control-opacity](https://github.com/dayjournal/Leaflet.Control.Opacity) : contrôle de l'opacité des couches pour Leaflet.
 
 ```html
