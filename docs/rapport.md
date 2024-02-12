@@ -2,7 +2,7 @@
 outline: deep
 ---
 # Rapport UE Webmapping
-Ce rapport retrace le travail de création d'une carte web dynamique à l'aide de la librairie [leaflet](https://github.com/Leaflet/Leaflet) et du framework [Vitepress](https://vitepress.dev/). Le résultat final esi visble [ici](https://adrienkn.github.io/webmapping_project/). 
+Ce rapport retrace le travail de création d'une carte web dynamique à l'aide de la librairie [leaflet](https://github.com/Leaflet/Leaflet) et du framework [Vitepress](https://vitepress.dev/). Le résultat final est visible [ici](https://adrienkn.github.io/webmapping_project/). 
 
 Nous étudierons dans un premier temps les différentes composantes de la carte, puis le script général du projet.
 
@@ -22,14 +22,14 @@ Nous étudierons dans un premier temps les différentes composantes de la carte,
 ### Les cartes classifiées
 Nous avons importés les 2 cartes classifiées suivantes : 
 
-- ***Cropped classification lvl3*** : réalisée par JOURDAIN Vincent, et moi-même. Elle est issue d'un modèle de classification RandomForest appliqué à une zone d'étude réduite, avec donc avec un échantillonnage faible.
+- ***Cropped classification lvl3*** : réalisée par Felipe AGUIAR MARTIN, Léo LE GOURRIEREC, Vincent JOURDAIN et moi-même, elle est issue d'un modèle de classification *RandomForest* appliqué à une zone d'étude réduite.
 
 - ***Complete classification lvl3*** : réalisée par le groupe de PINNA Anne-Sophie, je l'utilise ici à titre de comparaison. En effet, ils ont effectué le même travail de classification avec des hyperparamètres légèrement différents mais surtout, une zone de calcul bien plus vaste. L'entraînement de leur modèle a donc été bien plus robuste.
 
-### Paramétrage des flux WMS avec GeoCoder
+### Paramétrage des flux WMS avec *GeoCoder*
 La méthode suivie pour la réalisation de cette carte est celle présentée dans le cours de M. JEGOUD, à savoir la création et la consommation d'un flux WMS à partir d'un fichier raster GeoTiff stocké sur un server *GeoServer*. 
 
-Nous avons ainsi importé notre carte classifié sur *GeoServer*, paramètré le flux WMS correspondant et créé un style approprié. 
+Nous avons ainsi importé notre carte classifié sur *GeoServer*, paramétré le flux WMS correspondant et créé un style approprié. 
 
 Nous avons ensuite importé la carte du groupe d'Anne-Sophie PINNA en y applicant le même style que notre première carte, afin d'en faciliter la comparaison. 
 
@@ -87,7 +87,7 @@ var map = L.map('map', {
 ```
 
 ## Les fonds de carte
-Nous renseignons les différents fonds de carte à utiliser dans la variable *basemaps*, que l'on parcours ensuite sur la carte grâce à la fonction ***map.addControl(L.control.basemaps)*** .
+Nous renseignons les différents fonds de carte à utiliser dans la variable *basemaps*, que nous ajoutons ensuite à la carte grâce à la fonction ***map.addControl(L.control.basemaps)*** .
 
 ```js      
 // Here are the basemaps definition
@@ -127,7 +127,7 @@ Pour la couche *classif_lvl3*, nous ne précisons pas le style à utiliser. Nous
 
 Pour la couche *classif_lvl3_P*, nous précisons cette fois le style à utiliser, car différent du style par défaut.
 
-Nous renseignons le paramètre *transparent: true* pour m'assurer de la transparence des valeurs nulles sur la carte importée.
+Nous renseignons le paramètre *transparent: true* pour s'assurer de la transparence des valeurs nulles sur la carte importée.
 
 
 ```js 
