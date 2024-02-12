@@ -27,7 +27,7 @@ Nous avons importés les 2 cartes classifiées suivantes :
 - ***Complete classification lvl3*** : réalisée par le groupe de PINNA Anne-Sophie, je l'utilise ici à titre de comparaison. En effet, ils ont effectué le même travail de classification avec des hyperparamètres légèrement différents mais surtout, une zone de calcul bien plus vaste. L'entraînement de leur modèle a donc été bien plus robuste.
 
 ### Paramétrage des flux WMS avec *GeoCoder*
-La méthode suivie pour la réalisation de cette carte est celle présentée dans le cours de M. JEGOUD, à savoir la création et la consommation d'un flux WMS à partir d'un fichier raster GeoTiff stocké sur un server *GeoServer*. 
+La méthode suivie pour la réalisation de cette carte est celle présentée dans le cours de M. JEGOU, à savoir la création et la consommation d'un flux WMS à partir d'un fichier raster GeoTiff stocké sur un server *GeoServer*. 
 
 Nous avons ainsi importé notre carte classifié sur *GeoServer*, paramétré le flux WMS correspondant et créé un style approprié. 
 
