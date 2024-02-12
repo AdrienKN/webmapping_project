@@ -4,7 +4,7 @@ outline: deep
 # Rapport UE Webmapping
 Ce rapport retrace le travail de création d'une carte web dynamique à l'aide de la librairie [leaflet](https://github.com/Leaflet/Leaflet) et du framework [Vitepress](https://vitepress.dev/). Le résultat final est visible [ici](https://adrienkn.github.io/webmapping_project/). 
 
-Nous étudierons dans un premier temps les différentes composantes de la carte, puis le script général du projet.
+Nous étudierons dans un premier temps les différentes composantes de la carte, puis le script général du projet, disponible dans son intégralité sur [mon dépôt GitHub](https://github.com/AdrienKN/webmapping_project).
 
 # La carte et ses composantes
 ## Les fonds de carte
@@ -43,10 +43,10 @@ Ces observations ne permettent donc pas, dans notre cas d'étude, d'affirmer l'i
 
 Si la taille de l'échantillon ne justifie pas la qualité moindre des classifications, alors le problème est ailleurs.
 
-#### Une Réprésentativité des classes désiquilibrée
+#### Une réprésentativité des classes désiquilibrée
  La première source d'erreur réside certainement dans l'inéquilibre représentation des classes. Dans notre classification réduite comme dans celle du groupe de PINNA Anne-Sophie, nous remarquons aisément l'omniprésence de la classe "Chêne pure," dont la sur-représentation dans la zone d'étude dégrade la qualité de prédiction.
 
-#### La résolution spatiale et ses limites
+#### Les limites de notre résolution spatiale
 La superposition des couches de classifications avec les images satellites démontre l'inadéquation entre la problématique étudiée et la résolution spatiale utilisée. A vue d'oeil, le modèle n'est adapté qu'à l'analyse de groupes d'arbres, composés d'au moins 2 ou 3 individus, où alors d'individus aux caractèristiques dendrométriques très développées. 
 
 Certaines études d’imagerie, même à très haute résolution, souffrent déjà de ces effets : seuls les arbres les plus développés sont détectés ([Jean-Baptiste NDAMIYEHE NCUTIRAKIZA, 2020](https://doi.org/10.19182/bft2020.343.a31848)).
