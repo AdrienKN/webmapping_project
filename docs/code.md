@@ -141,9 +141,11 @@ var legend_simple = L.control({position: 'bottomleft'});
 
 legend_simple.onAdd = function (map) {
     let divlegend = L.DomUtil.create('divlegend');
-    divlegend.innerHTML = ('<div style = "color : black;">  <strong>Forest legend</strong> <br>'+
+    divlegend.innerHTML = ('<div id=legend-content style = "color : black;">  <strong>Essences forestières</strong> <br>'+
     '<img src="https://www.geotests.net/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&transparent=true&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=aknobloc:carte_essences_lvl3" alt="">'+
-    '</div>');
+    '</div>'+
+    '<style>#legend-content {background-color: rgba(255, 255, 255, 0.8); padding: 10px; border-radius: 5px;}</style>'+
+    '<style>#leg_map3 {width: 70%; display: block;}</style>');
     return divlegend;
     };
 legend_simple.addTo(map);
