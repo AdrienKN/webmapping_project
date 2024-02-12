@@ -33,20 +33,23 @@ Nous avons ainsi importé notre carte classifié sur *GeoServer*, paramétré le
 
 Nous avons ensuite importé la carte du groupe d'Anne-Sophie PINNA en y applicant le même style que notre première carte, afin d'en faciliter la comparaison. 
 
-### Interprétation et discussion de la qualité de classification
+### Interprétation et discussion de la qualité de la classification
 #### Observations qualitatives
-Sur notre zone de travail, nous pouvons visuellement noter quelques différences de classification. Au niveau de la forêt d'Eaunes, la classification complète a produit plus de pixels résiduels que dans le cas de notre classification réduite. La classification complète offre aussi une meilleure détection des frontières entre zones boisées et zones urbaines ou agricoles. 
+Sur notre zone de travail, nous pouvons visuellement noter quelques différences de classification entre les 2 cartes. Au niveau de la forêt d'Eaunes, la classification complète a produit plus de pixels résiduels que dans le cas de notre classification réduite. La classification complète offre aussi une meilleure détection des frontières entre zones boisées et zones urbaines ou agricoles. 
 
 Même constat plus à l'Ouest : notre classification réduite présente des résultats bien plus uniformes, mais vraissemblablement plus réalistes.
 
-#### Taille des échantillons
-Ces observations ne permettent pas, dans notre cas d'étude, d'affirmer l'impact positif de la taille de la zone d'étude sur la qualité des résultats. Dans les 2 cas, la qualité de la classification se montre déçevante. Nos travaux complémentaires d'analyse qualitative réalisés dans le cadre de l'UE Télédétection ont d'ailleurs démontré un taux de confusion du modèle très élevé, confirmant nos observations.
+Ces observations ne permettent donc pas, dans notre cas d'étude, d'affirmer l'impact positif de la taille de la zone d'étude sur la qualité des résultats. Dans les 2 cas, la qualité de la classification se montre déçevante. Nos travaux complémentaires d'analyse qualitative réalisés dans le cadre de l'UE Télédétection ont d'ailleurs démontré un taux de confusion du modèle très élevé, confirmant nos observations.
 
-#### Réprésentativité des classes
-Si la taille de l'échantillon ne justifie pas la qualité moindre des classifications, alors le problème est ailleurs, et certainement dans l'inéquilibre représentation des classes. Dans notre classification réduite comme dans celle du groupe de PINNA Anne-Sophie, nous remarquons aisément l'omniprésence de la classe "Chêne pure," dont la sur-représentation dans la zone d'étude dégrade la qualité de prédiction.
+Si la taille de l'échantillon ne justifie pas la qualité moindre des classifications, alors le problème est ailleurs.
 
-#### Résolution spatiale
-Aussi, la superposition des couches de classifications avec les images satellites démontre l'inadéquation entre la problématique étudiée et la résolution spatiale utilisée. A vue d'oeil, le modèle n'est adapté qu'à l'analyse de groupes d'arbres, composés d'au moins 2 ou 3 individus, où alors d'individus aux caractèristiques dendrométriques très développées. 
+#### Une Réprésentativité des classes désiquilibrée
+ La première source d'erreur réside certainement dans l'inéquilibre représentation des classes. Dans notre classification réduite comme dans celle du groupe de PINNA Anne-Sophie, nous remarquons aisément l'omniprésence de la classe "Chêne pure," dont la sur-représentation dans la zone d'étude dégrade la qualité de prédiction.
+
+#### La résolution spatiale et ses limites
+La superposition des couches de classifications avec les images satellites démontre l'inadéquation entre la problématique étudiée et la résolution spatiale utilisée. A vue d'oeil, le modèle n'est adapté qu'à l'analyse de groupes d'arbres, composés d'au moins 2 ou 3 individus, où alors d'individus aux caractèristiques dendrométriques très développées. 
+
+Certaines études d’imagerie, même à très haute résolution, souffrent déjà de ces effets : seuls les arbres les plus développés sont détectés ([Jean-Baptiste NDAMIYEHE NCUTIRAKIZA, 2020](https://doi.org/10.19182/bft2020.343.a31848)).
 
 Dans des forêts homogènes, jeunes, à faible diversité spécifique et avec quelques espèces sur-dominantes, une telle résolution ne permet pas d'appréhender efficacement la diversité des populations du milieu.
 
