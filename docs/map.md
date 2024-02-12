@@ -30,7 +30,7 @@ Nous avons ainsi importé notre carte classifié sur *GeoServer*, paramètré le
 
 Nous avons ensuite importé la carte du groupe d'Anne-Sophie PINNA en y applicant le même style que notre première carte, afin d'en faciliter la comparaison. 
 
-### Interprétation de la qualité de classification
+### Interprétation et discussion de la qualité de classification
 #### Observations qualitatives
 Sur notre zone de travail, nous pouvons visuellement noter quelques différences de classification. Au niveau de la forêt d'Eaunes, la classification complète a produit plus de pixels résiduels que dans le cas de notre classification réduite. La classification complète offre aussi une meilleure détection des frontières entre zones boisées et zones urbaines ou agricoles. 
 
@@ -42,7 +42,7 @@ Ces observations ne permettent pas, dans notre cas d'étude, d'affirmer l'impact
 #### Réprésentativité des classes
 Si la taille de l'échantillon ne justifie pas la qualité moindre des classifications, alors le problème est ailleurs, et certainement dans l'inéquilibre représentation des classes. Dans notre classification réduite comme dans celle du groupe de PINNA Anne-Sophie, nous remarquons aisément l'omniprésence de la classe "Chêne pure," dont la sur-représentation dans la zone d'étude dégrade la qualité de prédiction.
 
-#### Résolution spatitale
+#### Résolution spatiale
 Aussi, la superposition des couches de classifications avec les images satellites démontre l'inadéquation entre la problématique étudiée et la résolution spatiale utilisée. A vue d'oeil, le modèle n'est adapté qu'à l'analyse de groupes d'arbres, composés d'au moins 2 ou 3 individus, où alors d'individus aux caractèristiques dendrométriques très développées. 
 
 Dans des forêts homogènes, jeunes, à faible diversité spécifique et avec quelques espèces sur-dominantes, une telle résolution ne permet pas d'appréhender efficacement la diversité des populations du milieu.
